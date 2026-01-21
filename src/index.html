@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Antique Tech Store</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <div>
+          <h1>Antique Tech Store</h1>
+          <p class="muted">Vintage tech, appliances, and collectibles</p>
+        </div>
+      </div>
+
+      <nav class="top-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="products.html">All products</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h2>Shop by category</h2>
+        <p class="muted">
+          Choose a category to see the available items, prices, and stock.
+        </p>
+      </div>
+    </section>
+
+    <section class="grid" id="categories" aria-label="Product categories">
+      <!-- JS injects category cards here -->
+    </section>
+
+    <footer class="footer">
+      <p class="muted">© <span id="year"></span> Antique Tech Store</p>
+    </footer>
+  </main>
+
+  <script type="module" src="styles/app.js"></script>
+</body>
+</html>

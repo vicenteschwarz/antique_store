@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products • Antique Tech Store</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <div>
+          <h1>Antique Tech Store</h1>
+          <p class="muted" id="pageSubtitle">Products</p>
+        </div>
+      </div>
+
+      <nav class="top-nav">
+        <a href="index.html">Home</a>
+        <a href="products.html" class="active">Products</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="toolbar">
+      <a class="btn" href="index.html">← Back</a>
+
+      <div class="toolbar__right">
+        <input id="search" class="input" type="search" placeholder="Search products..." />
+        <select id="sort" class="select" aria-label="Sort products">
+          <option value="name-asc">Name (A–Z)</option>
+          <option value="price-asc">Price (low → high)</option>
+          <option value="price-desc">Price (high → low)</option>
+          <option value="stock-desc">Stock (high → low)</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="products-header">
+      <h2 id="categoryTitle">All products</h2>
+      <p class="muted" id="categoryHint">Tip: open this page from Home to filter by category.</p>
+    </section>
+
+    <section class="grid products" id="productsGrid" aria-label="Product list">
+      <!-- JS injects product cards here -->
+    </section>
+
+    <footer class="footer">
+      <p class="muted">© <span id="year"></span> Antique Tech Store</p>
+    </footer>
+  </main>
+
+  <script type="module" src="styles/app.js"></script>
+</body>
+</html>

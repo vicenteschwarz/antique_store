@@ -1,0 +1,188 @@
+:root{
+  --bg:#97664a;
+  --card:#151922;
+  --muted:#ebebeb;
+  --text:#ffffff;
+  --border:#262c39;
+  --accent:#c3a25f;
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container{max-width:1100px;margin:0 auto;padding:22px}
+.muted{color:var(--muted)}
+.small{font-size:.9rem}
+
+.site-header{
+  border-bottom:1px solid var(--border);
+  background: rgba(15,17,21,.85);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.brand{display:flex; gap:14px; align-items:center}
+.brand__logo{
+  width:42px;height:42px;display:grid;place-items:center;
+  border:1px solid var(--border);
+  border-radius:12px;
+  background: rgba(255,255,255,.03);
+  box-shadow: var(--shadow);
+  font-weight:800;
+}
+h1{margin:0;font-size:1.15rem}
+h2{margin:0 0 8px}
+
+.top-nav{display:flex; gap:14px; margin-top:12px}
+.top-nav a{
+  color:var(--muted);
+  text-decoration:none;
+  padding:8px 10px;
+  border-radius:10px;
+  border:1px solid transparent;
+}
+.top-nav a.active, .top-nav a:hover{
+  color:var(--text);
+  border-color:var(--border);
+  background:rgba(255,255,255,.03);
+}
+
+.hero{padding:18px 0}
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap:14px;
+}
+
+.card{
+  background: rgba(255,255,255,.03);
+  border:1px;
+  border-radius:4px;
+  box-shadow: var(--shadow);
+}
+
+.category{
+  grid-column: span 6;
+  text-decoration:none;
+  color:inherit;
+  padding:16px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  transition: transform .12s ease, border-color .12s ease;
+}
+.category:hover{
+  transform: translateY(-2px);
+  border-color: rgba(195,162,95,.45);
+}
+.card__icon{
+  width:50px;height:50px;border-radius:14px;
+  display:grid;place-items:center;
+  background:rgba(195,162,95,.12);
+  border:1px solid rgba(195,162,95,.25);
+  font-size:1.4rem;
+}
+.card__body h3{margin:0 0 6px;font-size:1.05rem}
+.card__body p{margin:0}
+.card__chevron{color:var(--muted); font-size:1.2rem}
+
+.toolbar{
+  display:flex; gap:12px; align-items:center; justify-content:space-between;
+  margin: 10px 0 16px;
+}
+.toolbar__right{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
+
+.btn{
+  display:inline-flex; align-items:center; gap:8px;
+  padding:10px 12px;
+  border-radius:12px;
+  border:1px solid var(--border);
+  color:var(--text);
+  background:rgba(255,255,255,.03);
+  text-decoration:none;
+}
+.input, .select{
+  padding:10px 12px;
+  border-radius:12px;
+  border:1px solid var(--border);
+  background:rgba(255,255,255,.03);
+  color:var(--text);
+  outline:none;
+}
+.input::placeholder{color:#7f8a99}
+
+.products-header{margin: 6px 0 12px}
+
+/* Product card with image */
+.product{
+  grid-column: span 4;
+  padding: 0;
+  overflow: hidden;
+}
+.product__img{
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid var(--border);
+  background: rgba(255,255,255,.02);
+}
+.product__content{padding:16px}
+.product__top{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  align-items:flex-start;
+}
+.product__name{margin:0;font-size:1.02rem}
+.product__bottom{
+  margin-top:12px;
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  align-items:baseline;
+  border-top:1px solid var(--border);
+  padding-top:10px;
+}
+.price{color:var(--accent)}
+
+.badge{
+  font-size:.82rem;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid var(--border);
+  color:var(--muted);
+  background:rgba(255,255,255,.03);
+  white-space:nowrap;
+}
+.badge.ok{border-color: rgba(120,255,170,.25); color:#b6f3c9; background:rgba(120,255,170,.08)}
+.badge.out{border-color: rgba(255,120,120,.25); color:#ffcbcb; background:rgba(255,120,120,.08)}
+
+.footer{padding:26px 0 10px; border-top:1px solid var(--border); margin-top:20px}
+.empty{
+  grid-column: 1 / -1;
+  padding:18px;
+  text-align:center;
+  color:var(--muted);
+  border:1px dashed var(--border);
+  border-radius:16px;
+  background:rgba(255,255,255,.02);
+}
+
+@media (max-width: 900px){
+  .category{grid-column: span 12}
+  .product{grid-column: span 6}
+}
+@media (max-width: 560px){
+  .product{grid-column: span 12}
+  .toolbar{flex-direction:column; align-items:stretch}
+  .toolbar__right{justify-content:space-between}
+}
