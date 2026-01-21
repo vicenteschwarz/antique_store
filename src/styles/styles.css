@@ -44,7 +44,7 @@ h2{margin:0 0 8px}
   color:var(--muted);
   text-decoration:none;
   padding:8px 10px;
-  border-radius:10px;
+  border-radius:4px;
   border:1px solid transparent;
 }
 .top-nav a.active, .top-nav a:hover{
@@ -103,7 +103,7 @@ h2{margin:0 0 8px}
 .btn{
   display:inline-flex; align-items:center; gap:8px;
   padding:10px 12px;
-  border-radius:12px;
+  border-radius:4px;
   border:1px solid var(--border);
   color:var(--text);
   background:rgba(255,255,255,.03);
@@ -111,13 +111,13 @@ h2{margin:0 0 8px}
 }
 .input, .select{
   padding:10px 12px;
-  border-radius:12px;
+  border-radius:4px;
   border:1px solid var(--border);
   background:rgba(255,255,255,.03);
   color:var(--text);
   outline:none;
 }
-.input::placeholder{color:#7f8a99}
+.input::placeholder{color:#ffffff}
 
 .products-header{margin: 6px 0 12px}
 
